@@ -5,7 +5,9 @@ export default function Hero() {
     <>
       <header className=" py-2 mx-4 lg:py-4 lg:mx-10 flex justify-between items-center">
         <p className="font-serif md:text-highlight">Louise Vassart</p>
-        <Button>Contact</Button>
+        <Button>
+          <a href="#contact">Contact</a>
+        </Button>
       </header>
       <section className="bg-abstractShape w-full h-[500px] lg:h-[90vh] flex bg-center bg-contain justify-center bg-no-repeat md:bg-right lg:bg-center items-start md:justify-start md:items-center  lg:justify-center sm:p-4 md:pl-8 lg:p-0 border-b-2 border-light md:border-b-0 lg:border-b-2">
         <h1 className="text-xs-h1 md:text-md-h1 lg:text-h1 font-serif leading-[2.8rem] pt-12 lg:leading-[5.5rem] lg:pt-0 font-light">

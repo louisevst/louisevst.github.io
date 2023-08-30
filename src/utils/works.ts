@@ -14,7 +14,7 @@ const works = [
     color: "red",
   },
   {
-    id: 1,
+    id: 3,
     title: "Business Management",
     location: "IFAPME, Perwez",
     duration: "3 months",
