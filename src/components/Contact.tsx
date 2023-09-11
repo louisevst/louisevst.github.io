@@ -31,20 +31,32 @@ const Contact = () => {
           id="contact"
         >
           <li className="text-xs-sub lg:text-sub ">Get in Touch</li>
-          <li className="flex items-center">
-            <img src={mail} className="w-8 mr-2" />
-
-            <a href="mailto:louisevassart@gmail.com">louisevassart@gmail.com</a>
+          <li>
+            <a
+              className="flex items-center"
+              href="mailto:louisevassart@gmail.com"
+            >
+              <img src={mail} className="w-8 mr-2" />
+              louisevassart@gmail.com
+            </a>
           </li>
-          <li className="flex items-center">
-            <img src={linkedin} className="w-8  mr-2" />
-
-            <a href="https://linkedin.com/in/louise-vassart">Louise Vassart</a>
+          <li>
+            <a
+              href="https://linkedin.com/in/louise-vassart"
+              className="flex items-center"
+            >
+              <img src={linkedin} className="w-8  mr-2" />
+              Louise Vassart
+            </a>
           </li>
-          <li className="flex items-center">
-            <img src={github} className="w-8  mr-2" />
-
-            <a href="https://github.com/louisevst">Louise Vst</a>
+          <li>
+            <a
+              href="https://github.com/louisevst"
+              className="flex items-center"
+            >
+              <img src={github} className="w-8  mr-2" />
+              Louise Vst
+            </a>
           </li>
         </ul>
       </section>

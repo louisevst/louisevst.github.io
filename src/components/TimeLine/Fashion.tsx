@@ -44,10 +44,11 @@ const Fashion: React.FC<FashionProps> = ({ onSectionEnter }) => {
       <div className="flex justify-between  w-3/4 xl:w-full">
         <div className="flex flex-col">
           <p className="max-w-lg pb-10 pt-4 js-show-on-scroll">
-            From understanding user behaviors to refining design principles,
-            this experience complements my aspiration to become a versatile
-            frontend developer. I'm excited to bring this newfound perspective
-            to my future projects.
+            My background in fashion design cultivated my creativity and taught
+            me to thrive under pressure. It honed my skills in sewing, pattern
+            making, and digital tools like Illustrator and Photoshop. This
+            aesthetic sensibility and patience now drive my passion for creating
+            beautiful and user-friendly websites.
           </p>
           <p className="text-xs-text self-end translate-x-20 pr-8 2xl:translate-x-40 pt-20 js-show-on-scroll">
             My creation for the 'Fashion Chessboard' Project

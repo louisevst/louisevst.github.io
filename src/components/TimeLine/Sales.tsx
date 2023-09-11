@@ -31,13 +31,13 @@ const Sales: React.FC<SalesProps> = ({ onSectionEnter }) => {
   return (
     <section ref={sectionRef} className="space-y-2" id="section-3">
       <h4 className="text-h4 font-serif js-show-on-scroll">My Sales Journey</h4>
-      <h5 className="text-sub  js-show-on-scroll">My work experience</h5>
+      <h5 className="text-sub  js-show-on-scroll">A Career Pivot</h5>
       <h6 className="text-highlight js-show-on-scroll">Oct 2020 - Oct 2022</h6>
       <p className="max-w-lg pb-10 pt-4 js-show-on-scroll">
-        From understanding user behaviors to refining design principles, this
-        experience complements my aspiration to become a versatile frontend
-        developer. I'm excited to bring this newfound perspective to my future
-        projects.
+        When I graduated, my dream was to launch my own upcycled fashion
+        business. While that venture didn't materialize, I had the chance to
+        work for a bridal store. These experiences taught me the art of
+        understanding and meeting clients' unique needs.
       </p>
       <div className="lg:flex w-full js-show-on-scroll lg:flex-wrap">
         {works.map((work) => (

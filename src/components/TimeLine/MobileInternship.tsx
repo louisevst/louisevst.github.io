@@ -1,5 +1,4 @@
 import Card from "../Card";
-import internship from "../../assets/Internship.svg";
 import useScrollAnimation from "../../hooks/useScrollAnimation";
 
 const MobileInternship = () => {
@@ -16,13 +15,11 @@ const MobileInternship = () => {
     >
       <p className="max-w-lg pb-10 pt-4 js-show-on-scroll">
         At the CRA-W, Center of Agronomical Research in Wallonia, I reimagined
-        phytosanitary product data access. Vue, Typescript, Tailwind refined UX.
-        JSON integration via Django enhanced backend collaboration. A spark for
-        impactful frontend journey.
-      </p>
-      <img src={internship} alt="Internship" />
-      <p className="text-xs-text">
-        The project before and after the frontend improvement
+        the frontend of a site to consult informations about phytosanitary
+        products.I used Vue, Typescript and Tailwind. The original site was made
+        using templating so I added JSON dump in the backend (Django, Python) to
+        communicate with the frontend. While the site is currently in testing, I
+        look forward to sharing it once it's live.
       </p>
     </Card>
   );

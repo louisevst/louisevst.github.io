@@ -40,9 +40,11 @@ const Internship: React.FC<InternshipProps> = ({ onSectionEnter }) => {
       <h6 className="text-highlight js-show-on-scroll">June - Aug. 2023</h6>
       <p className="max-w-lg pb-10 pt-4 js-show-on-scroll">
         At the CRA-W, Center of Agronomical Research in Wallonia, I reimagined
-        phytosanitary product data access. Vue, Typescript, Tailwind refined UX.
-        JSON integration via Django enhanced backend collaboration. A spark for
-        impactful frontend journey.
+        the frontend of a site to consult informations about phytosanitary
+        products.I used Vue, Typescript and Tailwind. The original site was made
+        using templating so I added JSON dump in the backend (Django, Python) to
+        communicate with the frontend. While the site is currently in testing, I
+        look forward to sharing it once it's live.
       </p>
       <img
         src={internship}

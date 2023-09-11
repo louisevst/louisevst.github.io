@@ -9,7 +9,7 @@ import git from "../assets/git.svg";
 
 export default function Skills() {
   return (
-    <ul className="py-2 overflow-auto whitespace-nowrap flex justify-start lg:justify-center items-center space-x-2 border-y-2 border-light">
+    <ul className="lg:py-2 py-4 overflow-auto whitespace-nowrap flex justify-start lg:justify-center items-center space-x-2 border-y-2 border-light">
       <li className="flex items-center px-4">
         <img className="w-8 md:w-10 pr-2" src={js} />
         <p>JavaScript</p>
