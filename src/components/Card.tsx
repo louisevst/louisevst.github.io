@@ -17,11 +17,11 @@ const Card: React.FC<CardProps> = ({
   click,
   children,
 }) => {
+  const [showMore, setShowMore] = useState(false);
+
   const cardClassName = `p-4 lg:mr-4 mb-4 md:py-8 rounded-3xl space-y-1 md:space-y-2 flex flex-col justify-between min-w-[300px] ${
     color === "blue" ? "bg-blue text-dark" : "bg-red"
-  }`;
-
-  const [showMore, setShowMore] = useState(false);
+  } `;
 
   return (
     <div className={cardClassName}>
@@ -32,10 +32,18 @@ const Card: React.FC<CardProps> = ({
         </li>
         <li className="pb-4">{text}</li>
       </ul>
-      {showMore && children}
+      <div
+        className={`transition-all duration-500 ease-in-out ${
+          showMore
+            ? "opacity-100 h-full w-full flex flex-col pr-8 gap-4"
+            : "opacity-0 h-0"
+        }`}
+      >
+        {showMore && children}
+      </div>
       {click && (
         <button
-          className="flex justify-end text-xs-h2 leading-6 cursor-pointer md:translate-y-4"
+          className="flex justify-end text-xs-h2 leading-6 cursor-pointer md:translate-y-4 "
           onClick={() => setShowMore(!showMore)}
         >
           {showMore ? "-" : "+"}

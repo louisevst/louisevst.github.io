@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import Card from "../Card";
 import projects from "../../utils/projects";
 import useScrollAnimation from "../../hooks/useScrollAnimation";
+import IconButton from "../IconButton";
 
 interface BecodeProps {
   onSectionEnter: (section: string) => void;
@@ -46,7 +47,7 @@ const Becode: React.FC<BecodeProps> = ({ onSectionEnter }) => {
         collaborative environment where we collectively grow through hands-on
         projects.
       </p>
-      <div className="lg:flex w-full lg:space-x-4 js-show-on-scroll">
+      <div className="flex  w-full space-x-4 js-show-on-scroll items-start">
         {projects.map((project) => (
           <Card
             key={project.id}
@@ -55,7 +56,15 @@ const Becode: React.FC<BecodeProps> = ({ onSectionEnter }) => {
             sub={project.description}
             color={project.color}
             click={project.link}
-          />
+          >
+            {project.details}
+            <IconButton
+              name="See Project"
+              to={project.link}
+              type="project"
+              color={project.color}
+            />
+          </Card>
         ))}
       </div>
     </section>
