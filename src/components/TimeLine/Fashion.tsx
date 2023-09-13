@@ -34,13 +34,13 @@ const Fashion: React.FC<FashionProps> = ({ onSectionEnter }) => {
 
   return (
     <section ref={sectionRef} className="space-y-2" id="section-4">
-      <h4 className="text-h4 font-serif js-show-on-scroll">
+      <h3 className="text-h4 font-serif js-show-on-scroll">
         Bachelor in Fashion Design
-      </h4>
-      <h5 className="text-sub js-show-on-scroll">Helmo, Liège</h5>
-      <h6 className="text-highlight js-show-on-scroll">
+      </h3>
+      <h4 className="text-sub js-show-on-scroll">Helmo, Liège</h4>
+      <p className="text-highlight js-show-on-scroll">
         September 2015 - June 2020
-      </h6>
+      </p>
       <div className="flex justify-between  w-3/4 xl:w-full">
         <div className="flex flex-col">
           <p className="max-w-lg pb-10 pt-4 js-show-on-scroll">

@@ -1,10 +1,11 @@
 import visibility from "../assets/visibility.svg";
-import add from "../assets/add.svg";
+import work from "../assets/work.svg";
+import school from "../assets/school.svg";
 
 interface props {
   name: string;
   type?: string;
-  to: string;
+  to?: string;
   color?: string;
 }
 
@@ -15,10 +16,11 @@ const ProjectButton: React.FC<props> = ({ name, type, to, color }) => {
 
   const iconClass = `w-8 mr-4 ${color === "red" ? "invert" : ""}`;
 
-  const iconSrc = type === "project" ? visibility : add;
+  const iconSrc =
+    type === "project" ? visibility : type === "work" ? work : school;
   return (
     <button
-      onClick={handleExternalRedirect}
+      onClick={type === "project" ? handleExternalRedirect : undefined}
       className="flex items-center border-b border-current"
     >
       <img src={iconSrc} alt="See Project" className={iconClass} />

@@ -20,11 +20,11 @@ export default function Timeline() {
 
   return (
     <section className="py-6 px-4 md:px-20 lg:px-0">
-      <h3 className="lg:text-center font-serif text-xs-h3 md:text-h3 lg:pt-20">
+      <h2 className="lg:text-center font-serif text-xs-h3 md:text-h3 lg:pt-20">
         My Journey
         <span className="text-red"> & </span>
-        Projects
-      </h3>
+        Digital Projects
+      </h2>
       <div className="lg:flex justify-between hidden">
         <Navbar
           currentSection={currentSection}

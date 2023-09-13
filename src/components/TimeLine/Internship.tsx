@@ -33,11 +33,11 @@ const Internship: React.FC<InternshipProps> = ({ onSectionEnter }) => {
 
   return (
     <section ref={sectionRef} className="space-y-2" id="section-1">
-      <h4 className="text-h4 font-serif js-show-on-scroll">
+      <h3 className="text-h4 font-serif js-show-on-scroll">
         Front End Internship
-      </h4>
-      <h5 className="text-sub js-show-on-scroll">CRA-W, Gembloux</h5>
-      <h6 className="text-highlight js-show-on-scroll">June - Aug. 2023</h6>
+      </h3>
+      <h4 className="text-sub js-show-on-scroll">CRA-W, Gembloux</h4>
+      <p className="text-highlight js-show-on-scroll">June - Aug. 2023</p>
       <p className="max-w-lg pb-10 pt-4 js-show-on-scroll">
         At the CRA-W, Center of Agronomical Research in Wallonia, I reimagined
         the frontend of a site to consult informations about phytosanitary

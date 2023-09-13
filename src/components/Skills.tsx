@@ -12,35 +12,35 @@ export default function Skills() {
     <ul className="lg:py-2 py-4 overflow-auto whitespace-nowrap flex justify-start lg:justify-center items-center space-x-2 border-y-2 border-light">
       <li className="flex items-center px-4">
         <img className="w-8 md:w-10 pr-2" src={js} />
-        <p>JavaScript</p>
+        <h3>JavaScript</h3>
       </li>
       <li className="flex items-center px-4">
         <img className="w-8 md:w-10 pr-2" src={react} />
-        <p>React</p>
+        <h3>React</h3>
       </li>
       <li className="flex items-center px-4">
         <img className="w-8 md:w-10 pr-2" src={typescript} />
-        <p>TypeScript</p>
+        <h3>TypeScript</h3>
       </li>
       <li className="flex items-center px-4">
         <img className="w-8 md:w-10 pr-2" src={vue} />
-        <p>Vue</p>
+        <h3>Vue</h3>
       </li>
       <li className="flex items-center px-4">
         <img className="w-8 md:w-10 pr-2" src={figma} />
-        <p>Figma</p>
+        <h3>Figma</h3>
       </li>
       <li className="flex items-center px-4">
         <img className="w-8 md:w-10 pr-2" src={html} />
-        <p>HTML</p>
+        <h3>HTML</h3>
       </li>
       <li className="flex items-center px-4">
         <img className="w-8 md:w-10 pr-2" src={css} />
-        <p>CSS</p>
+        <h3>CSS</h3>
       </li>
       <li className="flex items-center px-4">
         <img className="w-8 md:w-10 pr-2" src={git} />
-        <p className="pr-4">Git</p>
+        <h3 className="pr-4">Git</h3>
       </li>
     </ul>
   );

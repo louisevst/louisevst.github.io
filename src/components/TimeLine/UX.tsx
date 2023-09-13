@@ -33,9 +33,9 @@ const UX: React.FC<UXProps> = ({ onSectionEnter }) => {
 
   return (
     <section ref={sectionRef} className="space-y-2" id="section-0">
-      <h4 className="text-h4 font-serif js-show-on-scroll">UX Design</h4>
-      <h5 className="text-sub js-show-on-scroll">Coursera</h5>
-      <h6 className="text-highlight js-show-on-scroll">June - Now</h6>
+      <h3 className="text-h4 font-serif js-show-on-scroll">UX Design</h3>
+      <h4 className="text-sub js-show-on-scroll">Coursera</h4>
+      <p className="text-highlight js-show-on-scroll">June - Now</p>
       <p className="max-w-lg pb-10 pt-4 js-show-on-scroll">
         From understanding user behaviors to refining design principles, this
         experience complements my aspiration to become a versatile frontend

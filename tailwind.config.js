@@ -43,5 +43,5 @@ export default {
       "md-h1": "6.192rem",
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

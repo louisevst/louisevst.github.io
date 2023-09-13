@@ -6,8 +6,8 @@ import github from "../assets/github.svg";
 const Contact = () => {
   const downloadCV = () => {
     const downloadLink = document.createElement("a");
-    downloadLink.href = "/public/my-cv.pdf";
-    downloadLink.download = "my-cv.pdf";
+    downloadLink.href = "/public/CV.pdf";
+    downloadLink.download = "CV.pdf";
     downloadLink.click();
   };
 
@@ -15,22 +15,25 @@ const Contact = () => {
     <>
       <section className="border-y-2 border-light lg:flex lg:justify-between lg:px-16">
         <div className="space-y-4 border-b-2 border-light lg:border-0 py-8 px-4 md:px-8 lg:py-10">
-          <h2 className="font-serif text-xs-h3">
-            From Fashion Design to Web Developement
-          </h2>
-          <p className="md:max-w-lg pb-4">
-            After finishing my studies, I lacked something intelectually
-            challenging. I discovered coding thanks to a friend. I first started
-            learning C to see if it was for me. I fell in love with coding and
-            got into beCode.
-          </p>
+          <h2 className="font-serif text-xs-h3">Let's Work Together</h2>
+          <div className="md:max-w-lg pb-4">
+            <h3>I have a strong desire to learn and grow as a developer.</h3>
+            <p>
+              I am a fast-learner, punctual, and reliable. I can work
+              independently or as part of a team, depending on the project
+              requirements. More information can be found in my CV, which can be
+              downloaded below.
+            </p>
+          </div>
           <Button onClick={downloadCV}>Download my CV</Button>
         </div>
         <ul
           className="py-8 space-y-4 px-4 md:px-8 lg:border-l-2 border-light flex justify-center flex-col"
           id="contact"
         >
-          <li className="text-xs-sub lg:text-sub ">Get in Touch</li>
+          <li>
+            <h3 className="text-xs-sub lg:text-sub ">Get in Touch</h3>
+          </li>
           <li>
             <a
               className="flex items-center"

@@ -1,9 +1,6 @@
 import Card from "../Card";
-import useScrollAnimation from "../../hooks/useScrollAnimation";
 
 const MobileInternship = () => {
-  useScrollAnimation("js-show-on-scroll");
-
   return (
     <Card
       key="2"
@@ -13,7 +10,7 @@ const MobileInternship = () => {
       color="red"
       click="xxx"
     >
-      <p className="max-w-lg pb-10 pt-4 js-show-on-scroll">
+      <p className="max-w-lg pb-10 pt-4">
         At the CRA-W, Center of Agronomical Research in Wallonia, I reimagined
         the frontend of a site to consult informations about phytosanitary
         products.I used Vue, Typescript and Tailwind. The original site was made

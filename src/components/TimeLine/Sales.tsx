@@ -17,7 +17,7 @@ const Sales: React.FC<SalesProps> = ({ onSectionEnter }) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5,
+      threshold: 0.8,
     });
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -30,14 +30,18 @@ const Sales: React.FC<SalesProps> = ({ onSectionEnter }) => {
 
   return (
     <section ref={sectionRef} className="space-y-2" id="section-3">
-      <h4 className="text-h4 font-serif js-show-on-scroll">My Sales Journey</h4>
-      <h5 className="text-sub  js-show-on-scroll">A Career Pivot</h5>
-      <h6 className="text-highlight js-show-on-scroll">Oct 2020 - Oct 2022</h6>
+      <h3 className="text-h4 font-serif js-show-on-scroll">
+        My Sales Experience
+      </h3>
+      <h4 className="text-sub  js-show-on-scroll">A Career Switch</h4>
+      <p className="text-highlight js-show-on-scroll">Oct 2020 - Oct 2022</p>
       <p className="max-w-lg pb-10 pt-4 js-show-on-scroll">
         When I graduated, my dream was to launch my own upcycled fashion
-        business. While that venture didn't materialize, I had the chance to
-        work for a bridal store. These experiences taught me the art of
-        understanding and meeting clients' unique needs.
+        business. Although the project itself didn't work out, I had the chance
+        to work for a bridal store. Those retail experiences taught me the art
+        of understanding and meeting clients unique needs. While I was working,
+        I started preparing my way to BeCode by learning CSS, HTML, JavaScript
+        and PHP on Sololearn.
       </p>
       <div className="lg:flex w-full js-show-on-scroll lg:flex-wrap">
         {works.map((work) => (

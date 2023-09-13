@@ -25,13 +25,13 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <div className={cardClassName}>
-      <ul>
-        <li className="text-xs-sub md:text-sub mb-1 mr-4 lg:mr-8">{title}</li>
-        <li className="text-xs-highlight md:text-highlight mr-4 lg:mr-8">
+      <div>
+        <h5 className="text-xs-sub md:text-sub mb-1 mr-4 lg:mr-8">{title}</h5>
+        <h6 className="text-xs-highlight md:text-highlight mr-4 lg:mr-8">
           {sub}
-        </li>
-        <li className="pb-4">{text}</li>
-      </ul>
+        </h6>
+        <p className="pb-4">{text}</p>
+      </div>
       <div
         className={`transition-all duration-500 ease-in-out ${
           showMore
