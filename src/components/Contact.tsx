@@ -6,7 +6,7 @@ import github from "../assets/github.svg";
 const Contact = () => {
   const downloadCV = () => {
     const downloadLink = document.createElement("a");
-    downloadLink.href = "/public/CV.pdf";
+    downloadLink.href = "/CV.pdf";
     downloadLink.download = "CV.pdf";
     downloadLink.click();
   };
