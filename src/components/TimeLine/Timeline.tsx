@@ -11,7 +11,7 @@ import MobileInternship from "./MobileInternship";
 import MobileSales from "./MobileSales";
 import MobileUX from "./MobileUX";
 
-export default function Timeline() {
+const Timeline = () => {
   const [currentSection, setCurrentSection] = useState("UX");
 
   const handleSectionEnter = (sectionTitle: string) => {
@@ -47,4 +47,5 @@ export default function Timeline() {
       </div>
     </section>
   );
-}
+};
+export default Timeline;

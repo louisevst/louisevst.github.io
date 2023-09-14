@@ -13,10 +13,10 @@ const MobileInternship = () => {
       <p className="max-w-lg pb-10 pt-4">
         At the CRA-W, Center of Agronomical Research in Wallonia, I reimagined
         the frontend of a site to consult informations about phytosanitary
-        products.I used Vue, Typescript and Tailwind. The original site was made
-        using templating so I added JSON dump in the backend (Django, Python) to
-        communicate with the frontend. While the site is currently in testing, I
-        look forward to sharing it once it's live.
+        products. I used Vue, Typescript and Tailwind. The original site was
+        made using templating so I added JSON dump in the backend (Django,
+        Python) to communicate with the frontend. While the site is currently in
+        testing, I look forward to sharing it once it's live.
       </p>
     </Card>
   );

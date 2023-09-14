@@ -1,6 +1,19 @@
+import { useEffect, useState } from "react";
 import Button from "./Button";
 
-export default function Hero() {
+const Hero = () => {
+  const [loading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const image = new Image();
+    image.src = "/src/assets/abstractShape.jpg";
+
+    image.addEventListener("load", () => {
+      //      document.getElementById("hero-bg")?.classList.add("bg-abstractShape");
+      setIsLoading(false);
+    });
+  }, []);
+
   function goToContact() {
     const section = document.getElementById("contact");
     if (section) {
@@ -14,8 +27,14 @@ export default function Hero() {
         <p className="font-serif md:text-highlight">Louise Vassart</p>
         <Button onClick={goToContact}>Contact</Button>
       </header>
-      <section className="bg-abstractShape w-full h-[500px] lg:h-[90vh] flex bg-center bg-contain justify-center bg-no-repeat md:bg-right lg:bg-center items-start md:justify-start md:items-center  lg:justify-center sm:p-4 md:pl-8 lg:p-0 border-b-2 border-light md:border-b-0 lg:border-b-2">
-        <h1 className="text-xs-h1 md:text-md-h1 lg:text-h1 font-serif leading-[2.8rem] pt-12 lg:leading-[5.5rem] lg:pt-0 font-light">
+      <section
+        id="hero-bg"
+        className={`relative before:transition before:duration-700 before:content-[""] before:absolute before:top-0 before:right-0 before:left-0 before:bottom-0 w-full h-[500px] lg:h-[90vh] flex justify-center bg-center bg-contain bg-no-repeat lg:bg-center md:bg-right items-start md:justify-start md:items-center  lg:justify-center sm:p-4 md:pl-8 lg:p-0 border-b-2 border-light md:border-b-0 lg:border-b-2 
+       ${
+         loading ? "before:bg-dark/100" : "before:bg-dark/0 bg-abstractShape"
+       } `}
+      >
+        <h1 className="relative text-xs-h1 md:text-md-h1 lg:text-h1 font-serif leading-[2.8rem] pt-12 lg:leading-[5.5rem] lg:pt-0 font-light">
           <span className="text-red">Front End</span>
           <br />
           Developer
@@ -37,4 +56,5 @@ export default function Hero() {
       </section>
     </>
   );
-}
+};
+export default Hero;

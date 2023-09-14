@@ -43,7 +43,7 @@ const Card: React.FC<CardProps> = ({
       </div>
       {click && (
         <button
-          className="flex justify-end text-xs-h2 leading-6 cursor-pointer md:translate-y-4 "
+          className="hover:opacity-80 transition-opacity flex justify-end text-xs-h2 leading-6 cursor-pointer md:translate-y-4 "
           onClick={() => setShowMore(!showMore)}
         >
           {showMore ? "-" : "+"}

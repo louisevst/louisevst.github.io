@@ -1,12 +1,49 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import works from "../../utils/works";
 import Card from "../Card";
+import ScrollButton from "./ScrollButton";
 
 interface SalesProps {
   onSectionEnter: (section: string) => void;
 }
 
 const Sales: React.FC<SalesProps> = ({ onSectionEnter }) => {
+  // Conditionnaly rendering left and right buttons
+  const scrollSectionRef = useRef<HTMLDivElement | null>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const checkScrollableDimensions = () => {
+    const scrollSection = scrollSectionRef.current;
+
+    if (scrollSection) {
+      const containerWidth = scrollSection.clientWidth;
+      const scrollableWidth = scrollSection.scrollWidth - containerWidth;
+
+      setCanScrollLeft(scrollSection.scrollLeft > 0);
+
+      setCanScrollRight(scrollSection.scrollLeft < scrollableWidth - 5);
+    }
+  };
+
+  useEffect(() => {
+    const scrollSection = scrollSectionRef.current;
+
+    if (scrollSection) {
+      scrollSection.addEventListener("scroll", checkScrollableDimensions);
+    }
+
+    checkScrollableDimensions();
+
+    return () => {
+      if (scrollSection) {
+        scrollSection.removeEventListener("scroll", checkScrollableDimensions);
+      }
+    };
+  }, []);
+
+  //Having the title of the section displayed on the side
+
   const sectionRef = useRef(null);
 
   const handleIntersection: IntersectionObserverCallback = (entries) => {
@@ -43,16 +80,27 @@ const Sales: React.FC<SalesProps> = ({ onSectionEnter }) => {
         I started preparing my way to BeCode by learning CSS, HTML, JavaScript
         and PHP on Sololearn.
       </p>
-      <div className="lg:flex w-full js-show-on-scroll lg:flex-wrap">
-        {works.map((work) => (
-          <Card
-            key={work.id}
-            title={work.title}
-            text={work.duration}
-            sub={work.location}
-            color={work.color}
-          />
-        ))}
+      <div className="relative group">
+        <div
+          className="scroll-section lg:flex w-full js-show-on-scroll overflow-auto scroll-section scrollbar-hide"
+          ref={scrollSectionRef}
+        >
+          {works.map((work) => (
+            <Card
+              key={work.id}
+              title={work.title}
+              text={work.duration}
+              sub={work.location}
+              color={work.color}
+            />
+          ))}
+          {canScrollRight && (
+            <ScrollButton direction="right" scrollRef={scrollSectionRef} />
+          )}
+          {canScrollLeft && (
+            <ScrollButton direction="left" scrollRef={scrollSectionRef} />
+          )}
+        </div>
       </div>
     </section>
   );

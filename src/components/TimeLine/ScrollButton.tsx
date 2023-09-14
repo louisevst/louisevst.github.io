@@ -17,9 +17,9 @@ const ScrollButton: React.FC<props> = ({ direction, scrollRef }) => {
 
     if (scrollSection) {
       if (direction === "right") {
-        scrollSection.scrollBy({ left: 600, behavior: "smooth" });
+        scrollSection.scrollBy({ left: 700, behavior: "smooth" });
       } else {
-        scrollSection.scrollBy({ left: -600, behavior: "smooth" });
+        scrollSection.scrollBy({ left: -700, behavior: "smooth" });
       }
     }
   };

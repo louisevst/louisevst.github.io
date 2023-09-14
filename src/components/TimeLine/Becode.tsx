@@ -21,14 +21,14 @@ const Becode: React.FC<BecodeProps> = ({ onSectionEnter }) => {
 
     if (scrollSection) {
       const containerWidth = scrollSection.clientWidth;
-      console.log(containerWidth);
+      const scrollableWidth = scrollSection.scrollWidth - containerWidth;
+
       setCanScrollLeft(scrollSection.scrollLeft > 0);
 
-      setCanScrollRight(scrollSection.scrollLeft < containerWidth - 100);
+      setCanScrollRight(scrollSection.scrollLeft < scrollableWidth - 5);
     }
   };
 
-  // Attach an event listener to track scroll position changes
   useEffect(() => {
     const scrollSection = scrollSectionRef.current;
 

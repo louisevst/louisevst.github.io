@@ -7,7 +7,7 @@ import js from "../assets/js.svg";
 import typescript from "../assets/typescript.svg";
 import git from "../assets/git.svg";
 
-export default function Skills() {
+const Skills = () => {
   return (
     <ul className="lg:py-2 py-4 overflow-auto whitespace-nowrap flex justify-start lg:justify-center items-center space-x-2 border-y-2 border-light">
       <li className="flex items-center px-4">
@@ -44,4 +44,5 @@ export default function Skills() {
       </li>
     </ul>
   );
-}
+};
+export default Skills;

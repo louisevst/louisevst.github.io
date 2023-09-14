@@ -5,7 +5,7 @@ interface NavbarProps {
   sectionTitles: string[];
 }
 
-export default function Navbar({ currentSection, sectionTitles }: NavbarProps) {
+const Navbar = ({ currentSection, sectionTitles }: NavbarProps) => {
   const containerRef = useRef<HTMLUListElement | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number>(
     sectionTitles.indexOf(currentSection)
@@ -54,4 +54,6 @@ export default function Navbar({ currentSection, sectionTitles }: NavbarProps) {
       </ul>
     </nav>
   );
-}
+};
+
+export default Navbar;
