@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <>
-      <header className=" py-2 mx-4 lg:py-4 lg:mx-10 flex justify-between items-center">
+      <header className=" py-4 mx-4 lg:py-4 lg:mx-10 flex justify-between items-center">
         <p className="font-serif md:text-highlight">Louise Vassart</p>
         <Button onClick={goToContact}>Contact</Button>
       </header>

@@ -30,7 +30,7 @@ export default function Timeline() {
           currentSection={currentSection}
           sectionTitles={["UX", "Internship", "Becode", "Sales", "Fashion"]}
         />
-        <div className="space-y-20 xl:py-20 xl:pr-20 w-3/4">
+        <div className="space-y-20 xl:py-20 w-3/4">
           <UX onSectionEnter={handleSectionEnter} />
           <Internship onSectionEnter={handleSectionEnter} />
           <Becode onSectionEnter={handleSectionEnter} />

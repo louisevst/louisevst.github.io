@@ -22,7 +22,12 @@ const MobileBecode = () => {
       </p>
       <div className="space-y-2 w-full flex flex-col pr-8">
         {projects.map((project) => (
-          <IconButton key={project.id} name={project.title} type="project" />
+          <IconButton
+            key={project.id}
+            name={project.title}
+            type="project"
+            to={project.link}
+          />
         ))}
       </div>
     </Card>

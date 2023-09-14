@@ -1,14 +1,51 @@
-import { useRef, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import Card from "../Card";
 import projects from "../../utils/projects";
 import useScrollAnimation from "../../hooks/useScrollAnimation";
 import IconButton from "../IconButton";
+import ScrollButton from "./ScrollButton";
 
 interface BecodeProps {
   onSectionEnter: (section: string) => void;
 }
 
 const Becode: React.FC<BecodeProps> = ({ onSectionEnter }) => {
+  // Conditionnaly rendering left and right buttons
+  const scrollSectionRef = useRef<HTMLDivElement | null>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  // Function to check scrollable dimensions
+  const checkScrollableDimensions = () => {
+    const scrollSection = scrollSectionRef.current;
+
+    if (scrollSection) {
+      const containerWidth = scrollSection.clientWidth;
+      console.log(containerWidth);
+      setCanScrollLeft(scrollSection.scrollLeft > 0);
+
+      setCanScrollRight(scrollSection.scrollLeft < containerWidth - 100);
+    }
+  };
+
+  // Attach an event listener to track scroll position changes
+  useEffect(() => {
+    const scrollSection = scrollSectionRef.current;
+
+    if (scrollSection) {
+      scrollSection.addEventListener("scroll", checkScrollableDimensions);
+    }
+
+    checkScrollableDimensions();
+
+    return () => {
+      if (scrollSection) {
+        scrollSection.removeEventListener("scroll", checkScrollableDimensions);
+      }
+    };
+  }, []);
+
+  //Having the title of the section displayed on the side
   const sectionRef = useRef<HTMLElement | null>(null);
 
   const handleIntersection: IntersectionObserverCallback = (entries) => {
@@ -46,25 +83,37 @@ const Becode: React.FC<BecodeProps> = ({ onSectionEnter }) => {
         foundational concepts like using a mobile first strategy, developing
         responsive websites, and considering modularity and scalability.
       </p>
-      <div className="flex w-full js-show-on-scroll items-start overflow-auto scrollbar-hide">
-        {projects.map((project) => (
-          <Card
-            key={project.id}
-            title={project.title}
-            text={project.date}
-            sub={project.description}
-            color={project.color}
-            click={project.link}
-          >
-            {project.details}
-            <IconButton
-              name="See Project"
-              to={project.link}
-              type="project"
+      <div className="relative group">
+        <div
+          ref={scrollSectionRef}
+          className="scroll-section flex w-full js-show-on-scroll items-start overflow-auto scrollbar-hide"
+        >
+          {projects.map((project) => (
+            <Card
+              key={project.id}
+              title={project.title}
+              text={project.date}
+              sub={project.description}
               color={project.color}
-            />
-          </Card>
-        ))}
+              click={project.link}
+            >
+              {project.details}
+              <IconButton
+                name="See Project"
+                to={project.link}
+                type="project"
+                color={project.color}
+              />
+            </Card>
+          ))}
+        </div>
+
+        {canScrollRight && (
+          <ScrollButton direction="right" scrollRef={scrollSectionRef} />
+        )}
+        {canScrollLeft && (
+          <ScrollButton direction="left" scrollRef={scrollSectionRef} />
+        )}
       </div>
     </section>
   );

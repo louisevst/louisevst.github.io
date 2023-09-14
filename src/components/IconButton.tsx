@@ -11,7 +11,7 @@ interface props {
 
 const ProjectButton: React.FC<props> = ({ name, type, to, color }) => {
   const handleExternalRedirect = () => {
-    window.open(to, "_blank");
+    window.open(to);
   };
 
   const iconClass = `w-8 mr-4 ${color === "red" ? "invert" : ""}`;

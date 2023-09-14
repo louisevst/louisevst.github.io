@@ -32,7 +32,7 @@ const UX: React.FC<UXProps> = ({ onSectionEnter }) => {
   useScrollAnimation("js-show-on-scroll");
 
   return (
-    <section ref={sectionRef} className="space-y-2" id="section-0">
+    <section ref={sectionRef} className="space-y-2 xl:pr-20" id="section-0">
       <h3 className="text-h4 font-serif js-show-on-scroll">UX Design</h3>
       <h4 className="text-sub js-show-on-scroll">Coursera</h4>
       <p className="text-highlight js-show-on-scroll">June - Now</p>

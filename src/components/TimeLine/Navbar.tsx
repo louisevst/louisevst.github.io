@@ -42,7 +42,7 @@ export default function Navbar({ currentSection, sectionTitles }: NavbarProps) {
               className={` text-lg pl-4 cursor-pointer transition-transform duration-150 ease-linear ${
                 title === currentSection
                   ? "text-sub"
-                  : "text-highlight text-light/75"
+                  : "text-highlight text-light/75 hover:text-light transition-colors"
               }`}
               style={style}
               onClick={() => scrollToSection(index)}

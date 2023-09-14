@@ -34,28 +34,28 @@ const Contact = () => {
           <li>
             <h3 className="text-xs-sub lg:text-sub ">Get in Touch</h3>
           </li>
-          <li>
+          <li className="group">
             <a
-              className="flex items-center"
+              className="flex items-center group-hover:text-blue transition-colors"
               href="mailto:louisevassart@gmail.com"
             >
               <img src={mail} className="w-8 mr-2" />
               louisevassart@gmail.com
             </a>
           </li>
-          <li>
+          <li className="group">
             <a
               href="https://linkedin.com/in/louise-vassart"
-              className="flex items-center"
+              className="flex items-center group-hover:text-blue transition-colors"
             >
               <img src={linkedin} className="w-8  mr-2" />
               Louise Vassart
             </a>
           </li>
-          <li>
+          <li className="group">
             <a
               href="https://github.com/louisevst"
-              className="flex items-center"
+              className="flex items-center group-hover:text-blue transition-colors"
             >
               <img src={github} className="w-8  mr-2" />
               Louise Vst

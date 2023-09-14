@@ -33,7 +33,7 @@ const Fashion: React.FC<FashionProps> = ({ onSectionEnter }) => {
   useScrollAnimation("js-show-on-scroll");
 
   return (
-    <section ref={sectionRef} className="space-y-2" id="section-4">
+    <section ref={sectionRef} className="space-y-2 xl:pr-20" id="section-4">
       <h3 className="text-h4 font-serif js-show-on-scroll">
         Bachelor in Fashion Design
       </h3>
