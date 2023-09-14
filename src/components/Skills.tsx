@@ -11,35 +11,39 @@ const Skills = () => {
   return (
     <ul className="lg:py-2 py-4 overflow-auto whitespace-nowrap flex justify-start lg:justify-center items-center space-x-2 border-y-2 border-light">
       <li className="flex items-center px-4">
-        <img className="w-8 md:w-10 pr-2" src={js} />
+        <img className="w-8 md:w-10 pr-2" src={js} alt="JavaScript Logo" />
         <h3>JavaScript</h3>
       </li>
       <li className="flex items-center px-4">
-        <img className="w-8 md:w-10 pr-2" src={react} />
+        <img className="w-8 md:w-10 pr-2" src={react} alt="React Logo" />
         <h3>React</h3>
       </li>
       <li className="flex items-center px-4">
-        <img className="w-8 md:w-10 pr-2" src={typescript} />
+        <img
+          className="w-8 md:w-10 pr-2"
+          src={typescript}
+          alt="TypeScript Logo"
+        />
         <h3>TypeScript</h3>
       </li>
       <li className="flex items-center px-4">
-        <img className="w-8 md:w-10 pr-2" src={vue} />
+        <img className="w-8 md:w-10 pr-2" src={vue} alt="Vue.js Logo" />
         <h3>Vue</h3>
       </li>
       <li className="flex items-center px-4">
-        <img className="w-8 md:w-10 pr-2" src={figma} />
+        <img className="w-8 md:w-10 pr-2" src={figma} alt="Figma Logo" />
         <h3>Figma</h3>
       </li>
       <li className="flex items-center px-4">
-        <img className="w-8 md:w-10 pr-2" src={html} />
+        <img className="w-8 md:w-10 pr-2" src={html} alt="HTML Logo" />
         <h3>HTML</h3>
       </li>
       <li className="flex items-center px-4">
-        <img className="w-8 md:w-10 pr-2" src={css} />
+        <img className="w-8 md:w-10 pr-2" src={css} alt="CSS Logo" />
         <h3>CSS</h3>
       </li>
       <li className="flex items-center px-4">
-        <img className="w-8 md:w-10 pr-2" src={git} />
+        <img className="w-8 md:w-10 pr-2" src={git} alt="Git Logo" />
         <h3 className="pr-4">Git</h3>
       </li>
     </ul>

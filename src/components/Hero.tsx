@@ -6,7 +6,8 @@ const Hero = () => {
 
   useEffect(() => {
     const image = new Image();
-    image.src = "/src/assets/abstractShape.jpg";
+    image.src = "./assets/abstractShape-3401f0ef.jpg";
+    // image.src = "/assets/abstractShape.jpg";
 
     image.addEventListener("load", () => {
       //      document.getElementById("hero-bg")?.classList.add("bg-abstractShape");

@@ -19,8 +19,8 @@ const Card: React.FC<CardProps> = ({
 }) => {
   const [showMore, setShowMore] = useState(false);
 
-  const cardClassName = `p-4 lg:mr-4 mb-4 md:py-8 rounded-3xl space-y-1 md:space-y-2 flex flex-col justify-between min-w-[300px] ${
-    color === "blue" ? "bg-blue text-dark" : "bg-red"
+  const cardClassName = `p-4 lg:mr-4 mb-4 md:py-8 rounded-3xl space-y-1 md:space-y-2 flex flex-col justify-between min-w-[300px] text-dark ${
+    color === "blue" ? "bg-blue" : "bg-red"
   } `;
 
   return (

@@ -98,12 +98,7 @@ const Becode: React.FC<BecodeProps> = ({ onSectionEnter }) => {
               click={project.link}
             >
               {project.details}
-              <IconButton
-                name="See Project"
-                to={project.link}
-                type="project"
-                color={project.color}
-              />
+              <IconButton name="See Project" to={project.link} type="project" />
             </Card>
           ))}
         </div>

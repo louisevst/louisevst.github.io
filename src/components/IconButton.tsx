@@ -6,15 +6,14 @@ interface props {
   name: string;
   type?: string;
   to?: string;
-  color?: string;
 }
 
-const ProjectButton: React.FC<props> = ({ name, type, to, color }) => {
+const ProjectButton: React.FC<props> = ({ name, type, to }) => {
   const handleExternalRedirect = () => {
     window.open(to);
   };
 
-  const iconClass = `w-8 mr-4 ${color === "red" ? "invert" : ""}`;
+  const iconClass = `w-8 mr-4`;
 
   const iconSrc =
     type === "project" ? visibility : type === "work" ? work : school;

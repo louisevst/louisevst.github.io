@@ -39,7 +39,7 @@ const Contact = () => {
               className="flex items-center group-hover:text-blue transition-colors"
               href="mailto:louisevassart@gmail.com"
             >
-              <img src={mail} className="w-8 mr-2" />
+              <img src={mail} className="w-8 mr-2" alt="Mail Logo" />
               louisevassart@gmail.com
             </a>
           </li>
@@ -48,7 +48,7 @@ const Contact = () => {
               href="https://linkedin.com/in/louise-vassart"
               className="flex items-center group-hover:text-blue transition-colors"
             >
-              <img src={linkedin} className="w-8  mr-2" />
+              <img src={linkedin} className="w-8  mr-2" alt="LinkedIn Logo" />
               Louise Vassart
             </a>
           </li>
@@ -57,7 +57,7 @@ const Contact = () => {
               href="https://github.com/louisevst"
               className="flex items-center group-hover:text-blue transition-colors"
             >
-              <img src={github} className="w-8  mr-2" />
+              <img src={github} className="w-8  mr-2" alt="Github Logo" />
               Louise Vst
             </a>
           </li>
